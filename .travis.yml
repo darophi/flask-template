@@ -1,0 +1,16 @@
+language: python
+python: 
+  - "3.6"
+
+services:
+  - neo4j
+
+cache: pip
+
+install: 
+  # Install all the dependencies that are mentioned in the setup.py
+  - pip install .
+
+script: 
+  # Find all the test automatically
+  - python -m unittest discover --verbose
